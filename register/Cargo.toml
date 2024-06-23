@@ -1,0 +1,15 @@
+[package]
+name = "register"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["derive"]
+derive = ["dep:register_field_derive"]
+
+[dependencies]
+register_macro = { path = "../register_macro" }
+register_field = { path = "../register_field" }
+register_field_derive = { path = "../register_field_derive", optional = true }
